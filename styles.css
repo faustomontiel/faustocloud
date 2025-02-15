@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: black;
@@ -7,6 +8,7 @@ body {
     background-size: cover;
     background-position: center;
 }
+
 #console {
     color: #33ff33;
     font-family: 'Courier New', Courier, monospace;
@@ -34,7 +36,6 @@ body {
     }
 }
 
-
 header {
     text-align: center;
     padding: 20px 100px 10px 10px;
@@ -48,23 +49,31 @@ h1, h2 {
     color: #00ff00;
 }
 
-#credenciales {
+#contenedor {
     display: flex;
+    justify-content: space-between;
+    gap: 10px; 
+    margin: 25px;
+}
+
+#repositorios, #credenciales {
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
     padding: 15px;
     background-color: #1e1e1e;
-    margin: 25px;
     border: 0.1px solid #00ff00;
     border-radius: 10px;
+    width: 30%; /* Ajustado para pantallas grandes */
+}
+
+#credenciales {
     margin-top: 25px;
 }
-/*
-#credentials {
-    display: inline-block;
-    min-width: 200px;
-    text-align: left;
-}*/
 
+#repositorios {
+    margin-top: 25px;
+}
 
 .credencial {
     text-align: center;
@@ -73,19 +82,6 @@ h1, h2 {
 .credencial img {
     width: 100px;
     height: 100px;
-}
-
-#repositorios {
-    display: flex;
-    justify-content: space-around;
-    padding: 15px;
-    background-color: #1e1e1e;
-    border: 0.1px solid #00ff00;
-    border-radius: 10px;
-    margin-top: 25px;
-    margin-left: 25px;
-    margin-right: 1000px;
-
 }
 
 #repo-list {
@@ -131,5 +127,60 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #1a1919;
-    margin-top: 75px;
+    margin-top: 170px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 20px;
+    }
+
+    #contenedor {
+        flex-direction: column; /* Hacer que las secciones se apilen en móviles */
+        gap: 20px; /* Aumentar el espacio entre secciones */
+        margin: 10px;
+    }
+
+    #repositorios, #credenciales {
+        width: 100%; /* Hacer que las secciones ocupen todo el ancho en dispositivos pequeños */
+        padding: 10px;
+    }
+
+    .repo-item {
+        margin-bottom: 15px;
+    }
+
+    #console {
+        font-size: 18px; /* Reducir el tamaño de la fuente para móviles */
+        margin: 10px;
+    }
+
+    footer {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 10px;
+    }
+
+    h1, h2 {
+        font-size: 18px; /* Reducir el tamaño de los títulos */
+    }
+
+    #console {
+        font-size: 16px; /* Reducir más el tamaño de la consola */
+    }
+
+    #repositorios, #credenciales {
+        width: 100%; /* Las secciones toman todo el ancho */
+        padding: 5px;
+    }
+
+    .repo-img {
+        width: 40px; /* Reducir el tamaño de las imágenes de los repositorios */
+        height: 40px;
+    }
 }
