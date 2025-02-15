@@ -1,0 +1,135 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: #00ff00;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+}
+#console {
+    color: #33ff33;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: #00ff00;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+header {
+    text-align: center;
+    padding: 20px 100px 10px 10px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    border: 0.1px solid #00ff00;
+    margin: 15px;
+}
+
+h1, h2 {
+    color: #00ff00;
+}
+
+#credenciales {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: #1e1e1e;
+    margin: 25px;
+    border: 0.1px solid #00ff00;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+/*
+#credentials {
+    display: inline-block;
+    min-width: 200px;
+    text-align: left;
+}*/
+
+
+.credencial {
+    text-align: center;
+}
+
+.credencial img {
+    width: 100px;
+    height: 100px;
+}
+
+#repositorios {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: #1e1e1e;
+    border: 0.1px solid #00ff00;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 1000px;
+
+}
+
+#repo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#repo-list li {
+    margin: 10px 0;
+}
+
+#repo-list a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+#repo-list a:hover {
+    text-decoration: underline;
+}
+
+.repo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.repo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.repo-desc {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1919;
+    margin-top: 75px;
+}
