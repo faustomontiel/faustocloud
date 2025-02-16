@@ -1,7 +1,6 @@
-/* General Styles */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: black;
+    background-color: #101312;
     color: #00ff00;
     margin: 0;
     padding: 0;
@@ -21,6 +20,20 @@ body {
     margin: 20px;
     white-space: nowrap;
     overflow: hidden;
+}
+
+#globe {
+    background-image: url('assets/globe.gif');
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    margin-top: 130px;
 }
 
 .cursor {
@@ -49,6 +62,26 @@ h1, h2 {
     color: #00ff00;
 }
 
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+
 #contenedor {
     display: flex;
     justify-content: space-between;
@@ -68,11 +101,21 @@ h1, h2 {
 }
 
 #credenciales {
-    margin-top: 25px;
+    margin: 45px;
 }
 
+#credenciales a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+#credenciales a:hover {
+    text-decoration: underline;
+}
+
+
 #repositorios {
-    margin-top: 25px;
+    margin: 45px;
 }
 
 .credencial {
@@ -127,7 +170,7 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #1a1919;
-    margin-top: 170px;
+    margin-top: 60px;
 }
 
 /* Responsive Styles */
@@ -175,7 +218,7 @@ footer {
     }
 
     #repositorios, #credenciales {
-        width: 100%; /* Las secciones toman todo el ancho */
+        width: 65%; /* Las secciones toman todo el ancho */
         padding: 5px;
     }
 
@@ -183,4 +226,9 @@ footer {
         width: 40px; /* Reducir el tamaño de las imágenes de los repositorios */
         height: 40px;
     }
+
+    #globe {
+        margin-top: 0px;
+    }
+
 }

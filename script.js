@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { 
             name: 'cloudmonitor-space ->', 
             url: 'https://github.com/faustomontiel/cloudmonitor', 
-            desc: 'A cluoud monitor based on AWS Services: Linux, Python, AWS.', 
+            desc: 'A cloud monitor based on AWS Services: Linux, Python, AWS.', 
             image: 'assets/cloudmonitor.gif' 
         },
         { 
